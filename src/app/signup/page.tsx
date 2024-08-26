@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const Page = () => {
-    const a = (
+    return (
         <div className="flex min-h-screen flex-col items-center justify-center md:flex-row">
             {/* image side */}
             <div className="relative flex h-[541px] w-full items-end justify-center bg-[#07332f] md:h-[170vh] md:w-1/2 md:items-center">
@@ -79,13 +79,6 @@ const Page = () => {
             </div>
         </div>
     );
-    const b = (
-        <div className="flex items-center justify-center">
-            <div className="h-full bg-green-950">sfa</div>
-            <div className="bg-white"></div>
-        </div>
-    );
-    return a;
 };
 
 export default Page;
