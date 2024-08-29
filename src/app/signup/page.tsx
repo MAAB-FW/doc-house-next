@@ -1,8 +1,30 @@
+"use client";
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Page = () => {
+    const router = useRouter();
+    const handleSignUp = async (e: any) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const username = form.username.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const user = { name, username, email, password };
+        try {
+            const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, user);
+            console.log(res.data);
+            if (res.data.status === 200) {
+                router.push("/");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
     return (
         <div className="flex min-h-screen flex-col items-center justify-center md:flex-row">
             {/* image side */}
@@ -28,7 +50,7 @@ const Page = () => {
             <div className="flex h-full w-full items-center px-5 py-8 md:w-1/2 lg:pl-[121px]">
                 <div className="w-full rounded-[10px] border px-5 py-[30px] text-[#0A0808] md:w-[461px] md:p-[50px]">
                     <p className="mb-6 text-center text-3xl font-bold md:mb-[50px]">Sign Up to Doc House</p>
-                    <form className="flex flex-col gap-4 text-xl font-semibold md:gap-6">
+                    <form onSubmit={handleSignUp} className="flex flex-col gap-4 text-xl font-semibold md:gap-6">
                         <label htmlFor="name">
                             Name
                             <input
