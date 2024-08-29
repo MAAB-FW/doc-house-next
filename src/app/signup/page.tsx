@@ -19,7 +19,7 @@ const Page = () => {
             const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, user);
             console.log(res.data);
             if (res.data.status === 200) {
-                router.push("/");
+                router.push("/signin");
             }
         } catch (error) {
             console.log(error);
@@ -58,6 +58,7 @@ const Page = () => {
                                 id="name"
                                 className="mt-[10px] block w-full rounded-md border bg-[#f3f3f3] p-5 text-base font-normal focus:border-gray-500 focus:outline-none"
                                 placeholder="Enter your name"
+                                required
                             />
                         </label>
                         <label htmlFor="username">
@@ -67,6 +68,7 @@ const Page = () => {
                                 id="username"
                                 className="mt-[10px] block w-full rounded-md border bg-[#f3f3f3] p-5 text-base font-normal focus:border-gray-500 focus:outline-none"
                                 placeholder="Enter your username"
+                                required
                             />
                         </label>
                         <label htmlFor="email">
@@ -76,6 +78,7 @@ const Page = () => {
                                 id="email"
                                 className="mt-[10px] block w-full rounded-md border bg-[#f3f3f3] p-5 text-base font-normal focus:border-gray-500 focus:outline-none"
                                 placeholder="Enter your email"
+                                required
                             />
                         </label>
                         <label htmlFor="password">
@@ -85,6 +88,7 @@ const Page = () => {
                                 id="password"
                                 className="mt-[10px] block w-full rounded-md border bg-[#f3f3f3] p-5 text-base font-normal focus:border-gray-500 focus:outline-none"
                                 placeholder="Enter your password"
+                                required
                             />
                         </label>
                         <button type="submit" className="mt-5 w-full rounded-md bg-[#f7a582] p-5 font-bold text-white">
