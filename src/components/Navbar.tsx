@@ -36,6 +36,10 @@ const Navbar = () => {
     const pathname = usePathname();
     const [menu, setMenu] = useState(false);
     if (pathname === "/signin" || pathname === "/signup") return;
+    const a = navLinks?.find((link) => link.path === pathname);
+    if (!a) {
+        return;
+    }
     return (
         <div className="relative w-full bg-[#07332f] text-white">
             <div className="mx-auto flex w-[81.25%] items-center justify-between pt-11 lg:pt-[50px]">
