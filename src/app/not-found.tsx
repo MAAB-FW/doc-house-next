@@ -7,11 +7,11 @@ const Error = () => {
     return (
         <div className="my-36 flex flex-col items-center text-center">
             <div className="">
-                <p className="text-[58px] font-bold text-[#0A0808]">Sorry,</p>
-                <p className="text-[39px] text-[#6C6B6B]">This page is not found.</p>
+                <p className="md-text-[58px] text-[38px] font-bold text-[#0A0808]">Sorry,</p>
+                <p className="md-text-[39px] text-[25px] text-[#6C6B6B]">This page is not found.</p>
             </div>
-            <Image src="/error/Frame.png" alt="not-found" width={400} height={400} className="my-12" />
-            <Link href={"/"} className="w-[300px] rounded-[10px] bg-[#F7A582] py-6 text-xl font-bold text-white">
+            <Image src="/error/Frame.png" alt="not-found" width={400} height={400} className="my-12 w-[273px] md:w-[607px]" />
+            <Link href={"/"} className="w-[300px] rounded-[10px] bg-[#F7A582] py-4 text-xl font-bold text-white md:py-6">
                 Back To Home
             </Link>
         </div>
