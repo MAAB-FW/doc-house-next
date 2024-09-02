@@ -55,7 +55,7 @@ const Navbar = () => {
                         <Link
                             href={path}
                             key={path}
-                            className={`${path === pathname && "bg-[#f7a582]"} px-5 py-5 text-lg font-semibold`}
+                            className={`${path === pathname && "bg-[#f7a582]"} px-5 py-5 text-lg font-semibold text-nowrap`}
                         >
                             {name}
                         </Link>
