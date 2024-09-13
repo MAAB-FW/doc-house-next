@@ -5,34 +5,33 @@ import { TfiMenu } from "react-icons/tfi";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { RxCross2 } from "react-icons/rx";
-
+export const navLinks = [
+    {
+        name: "Home",
+        path: "/",
+    },
+    {
+        name: "About",
+        path: "/about",
+    },
+    {
+        name: "Appointment",
+        path: "/appointment",
+    },
+    {
+        name: "Reviews",
+        path: "/reviews",
+    },
+    {
+        name: "Contact Us",
+        path: "/contactus",
+    },
+    {
+        name: "Sign In",
+        path: "/signin",
+    },
+];
 const Navbar = () => {
-    const navLinks = [
-        {
-            name: "Home",
-            path: "/",
-        },
-        {
-            name: "About",
-            path: "/about",
-        },
-        {
-            name: "Appointment",
-            path: "/appointment",
-        },
-        {
-            name: "Reviews",
-            path: "/reviews",
-        },
-        {
-            name: "Contact Us",
-            path: "/contactus",
-        },
-        {
-            name: "Sign In",
-            path: "/signin",
-        },
-    ];
     const pathname = usePathname();
     const [menu, setMenu] = useState(false);
     if (pathname === "/signin" || pathname === "/signup") return;
@@ -55,7 +54,7 @@ const Navbar = () => {
                         <Link
                             href={path}
                             key={path}
-                            className={`${path === pathname && "bg-[#f7a582]"} px-5 py-5 text-lg font-semibold text-nowrap`}
+                            className={`${path === pathname && "bg-[#f7a582]"} text-nowrap px-5 py-5 text-lg font-semibold`}
                         >
                             {name}
                         </Link>

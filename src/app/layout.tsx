@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 const source_Sans_3 = Source_Sans_3({ subsets: ["latin"] });
@@ -21,6 +22,7 @@ export default function RootLayout({
             <body className={source_Sans_3.className}>
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     );
