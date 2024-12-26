@@ -4,21 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
+type Response = {
+    message: string;
+    status: number;
+};
 
 const Page = () => {
     const router = useRouter();
-    const handleSignUp = async (e: any) => {
+    const handleSignUp: React.FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
-        const form = e.target;
-        const name = form.name.value;
-        const username = form.username.value;
-        const email = form.email.value;
-        const password = form.password.value;
+        const form = e.currentTarget.elements;
+        const name = (form.namedItem("name") as HTMLInputElement).value;
+        const username = (form.namedItem("username") as HTMLInputElement).value;
+        const email = (form.namedItem("email") as HTMLInputElement).value;
+        const password = (form.namedItem("password") as HTMLInputElement).value;
         const user = { name, username, email, password };
         try {
-            const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, user);
-            console.log(res.data);
-            if (res.data.status === 200) {
+            const { data }: { data: Response } = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, user);
+            if (data.status === 200) {
                 router.push("/signin");
             }
         } catch (error) {
