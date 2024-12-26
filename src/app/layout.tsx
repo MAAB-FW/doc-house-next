@@ -1,8 +1,9 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
+import React from "react";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 const source_Sans_3 = Source_Sans_3({ subsets: ["latin"] });
