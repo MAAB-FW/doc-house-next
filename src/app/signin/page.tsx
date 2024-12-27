@@ -5,20 +5,19 @@ import Link from "next/link";
 import React from "react";
 
 const Page = () => {
-    const handleSignIn = async (e: any) => {
+    const handleSignIn: React.FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
-        const form = e.target;
-        const emailOrUsername = form.emailOrUsername.value;
-        const password = form.password.value;
-        // const user = { emailOrUsername, password };
+        const form = e.currentTarget.elements;
+        const email = (form.namedItem("email") as HTMLInputElement).value;
+        const password = (form.namedItem("password") as HTMLInputElement).value;
+        // const user = { email, password };
         try {
-            const res = await signIn("credentials", {
-                emailOrUsername,
+            await signIn("credentials", {
+                email,
                 password,
                 redirect: true,
                 callbackUrl: "/",
             });
-            console.log(res);
         } catch (error) {
             console.log(error);
         }
@@ -53,7 +52,7 @@ const Page = () => {
                             Username or Email Address
                             <input
                                 type="text"
-                                id="emailOrUsername"
+                                id="email"
                                 className="mt-[10px] block w-full rounded-md border bg-[#f3f3f3] p-5 text-base font-normal focus:border-gray-500 focus:outline-none"
                                 placeholder="Enter your username"
                                 required
