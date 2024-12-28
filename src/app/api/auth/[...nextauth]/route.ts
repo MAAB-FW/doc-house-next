@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";
+import { Db, Document, WithId } from "mongodb";
 import NextAuth, { NextAuthOptions, User } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { connectDB } from "../../../../lib/connectDB";
@@ -25,21 +26,27 @@ const authOptions: NextAuthOptions = {
                     if (!credentials) {
                         return null;
                     }
-                    const { email, password } = credentials;
+                    const { email, password }: Credentials = credentials;
                     if (!email || !password) {
                         return null;
                     }
-                    const db = await connectDB();
-                    const currentUser = await db.collection("users").findOne({ $or: [{ email: email }, { username: email }] });
+
+                    const db: Db = await connectDB();
+                    const currentUser: WithId<Document> | null = await db
+                        .collection("users")
+                        .findOne({ $or: [{ email: email }, { username: email }] });
                     if (!currentUser) {
                         return null;
                     }
-                    console.log(currentUser);
                     const passwordMatched = bcrypt.compareSync(password, currentUser.password);
                     if (!passwordMatched) {
                         return null;
                     }
-                    return currentUser;
+                    return {
+                        id: currentUser._id.toString(),
+                        name: currentUser.name,
+                        email: currentUser.email,
+                    };
                 } catch (error) {
                     return null;
                 }
