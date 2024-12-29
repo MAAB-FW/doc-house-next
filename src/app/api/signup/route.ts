@@ -1,13 +1,13 @@
-import { EmailPass } from "@/types/types";
+import { userInput } from "@/types/types";
 import bcrypt from "bcrypt";
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "../../../lib/connectDB";
 
 export const POST = async (request: NextRequest) => {
     const db = await connectDB();
-    const body = await request.json();
-    const { email, password }: EmailPass = body;
-    const isExist = await db.collection("users").findOne({ email });
+    const body: userInput = await request.json();
+    const { email, password, username } = body;
+    const isExist = await db.collection("users").findOne({ $or: [{ email }, { username }] });
     if (isExist) {
         return NextResponse.json({ message: "user already exists!", status: 400 });
     }
