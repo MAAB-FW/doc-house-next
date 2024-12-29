@@ -1,5 +1,5 @@
 "use client";
-import axios from "axios";
+import { createUser } from "@/services/CRUD";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -20,7 +20,7 @@ const Page = () => {
         const password = (form.namedItem("password") as HTMLInputElement).value;
         const user = { name, username, email, password };
         try {
-            const { data }: { data: Response } = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, user);
+            const { data }: { data: Response } = await createUser(user);
             if (data.status === 200) {
                 router.push("/signin");
             }
