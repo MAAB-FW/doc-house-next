@@ -5,7 +5,7 @@ import InfoCard from "./InfoCard";
 
 export default function TimeLocationInfo() {
     return (
-        <section className="item-center mx-auto my-8 flex flex-col items-center justify-center gap-4 pt-[50px] text-white lg:my-[130px] lg:max-w-[1140px] lg:flex-row lg:gap-6">
+        <section className="item-center mx-auto my-8 flex flex-col items-center justify-center gap-4 text-white lg:my-[130px] lg:max-w-[1140px] lg:flex-row lg:gap-6">
             <InfoCard
                 bgColor={"#07332F"}
                 title={"Opening Hours"}
