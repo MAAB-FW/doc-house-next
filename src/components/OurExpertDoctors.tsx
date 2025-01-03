@@ -6,7 +6,7 @@ export default function OurExpertDoctors() {
         <section className="mx-auto my-8 lg:my-[130px] lg:max-w-[1140px]">
             <div className="mb-4 space-y-4 lg:mb-[3.125rem] lg:space-y-5">
                 <h1 className="text-center text-3xl font-bold text-[#0A0808] lg:text-[2.5rem]">Our Expert Doctors</h1>
-                <p className="mx-auto w-[300px] text-center text-[#3B3A3A] lg:w-[900px]">
+                <p className="mx-auto w-[335px] text-center text-[#3B3A3A] lg:w-[900px]">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                 </p>
