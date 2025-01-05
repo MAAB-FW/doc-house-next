@@ -1,3 +1,4 @@
+import ContactWithUs from "@/components/ContactWithUs";
 import HomeBanner from "@/components/HomeBanner";
 import OurExpertDoctors from "@/components/OurExpertDoctors";
 import OurServices from "@/components/OurServices";
@@ -12,6 +13,7 @@ export default function Home() {
             <TimeLocationInfo />
             <WhatOurPatientsSays />
             <OurExpertDoctors />
+            <ContactWithUs />
         </>
     );
 }
