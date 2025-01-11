@@ -1,5 +1,7 @@
 "use client";
+import Chair from "@/../public/appointment/chair1.png";
 import DynamicBanner from "@/components/DynamicBanner";
+import Image from "next/image";
 import { useState } from "react";
 
 const Page = () => {
@@ -46,61 +48,64 @@ const Page = () => {
     return (
         <div>
             <DynamicBanner pageName="Appointment" key={"Appointment"} />
-            <section className="container mx-auto my-32 px-4 lg:px-9">
-                {/* calendar */}
-                <div className="flex w-[312px] justify-end pr-7">
-                    <button onClick={handlePrevMonth}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
-                            <path
-                                d="M15 16.7362L8 10.5702L15 4.40425"
-                                stroke="#111827"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </button>
-                    <button onClick={handleNextMonth}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
-                            <path
-                                d="M9 4.40424L16 10.5702L9 16.7361"
-                                stroke="#111827"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <div className=" w-[312px] flex-shrink-0 rounded-[18px] bg-white px-6 py-5 shadow-[3px_4px_10px_2px_rgba(0,0,0,0.05)]">
-                    <h3 className="mb-[1.6875rem] text-xl font-semibold">
-                        {currentDate.toLocaleString("default", { month: "long" })} {year}
-                    </h3>
-                    <table>
-                        <thead>
-                            <tr className="*:px-[0.625rem]">
-                                <td>SU</td>
-                                <td>MO</td>
-                                <td>TU</td>
-                                <td>WE</td>
-                                <td>TH</td>
-                                <td>FR</td>
-                                <td>SA</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {weeks.map((week, weekIndex) => (
-                                <tr key={weekIndex} className="*:py-[0.625rem]">
-                                    {week.map((day, dayIndex) => (
-                                        <td key={dayIndex} className="text-center">
-                                            {day}
-                                        </td>
-                                    ))}
+            <section className="container mx-auto my-32 flex w-[81.25%] flex-col items-center justify-center gap-6 lg:flex-row lg:px-9">
+                <div className="flex-1">
+                    {/* calendar */}
+                    <div className="flex w-[312px] justify-end pr-7">
+                        <button onClick={handlePrevMonth}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+                                <path
+                                    d="M15 16.7362L8 10.5702L15 4.40425"
+                                    stroke="#111827"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </button>
+                        <button onClick={handleNextMonth}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+                                <path
+                                    d="M9 4.40424L16 10.5702L9 16.7361"
+                                    stroke="#111827"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="w-[312px] flex-shrink-0 rounded-[18px] bg-white px-6 py-5 shadow-[3px_4px_10px_2px_rgba(0,0,0,0.05)]">
+                        <h3 className="mb-[1.6875rem] text-xl font-semibold">
+                            {currentDate.toLocaleString("default", { month: "long" })} {year}
+                        </h3>
+                        <table>
+                            <thead>
+                                <tr className="*:px-[0.625rem]">
+                                    <td>SU</td>
+                                    <td>MO</td>
+                                    <td>TU</td>
+                                    <td>WE</td>
+                                    <td>TH</td>
+                                    <td>FR</td>
+                                    <td>SA</td>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {weeks.map((week, weekIndex) => (
+                                    <tr key={weekIndex} className="*:py-[0.625rem]">
+                                        {week.map((day, dayIndex) => (
+                                            <td key={dayIndex} className="text-center">
+                                                {day}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                <Image alt="" src={Chair} width={594} height={355} className="rounded-lg" />
             </section>
         </div>
     );
