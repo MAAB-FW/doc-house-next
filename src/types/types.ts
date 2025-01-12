@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import React from "react";
 
 export type userInput = {
     name: string;
@@ -22,4 +23,10 @@ export type TDoctorCard = {
     availability: string;
     price: number;
     doctorImage: string | StaticImageData;
+};
+
+export type TServiceCard = {
+    title: string;
+    color: string;
+    icon: React.ReactNode;
 };
