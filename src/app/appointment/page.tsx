@@ -482,12 +482,12 @@ const Page = () => {
                 </div>
                 <Image alt="" src={Chair} width={594} height={355} className="rounded-lg" />
             </section>
-            <section className="container mx-auto">
+            <section className="container mx-auto max-w-[1140px]">
                 <div className="text-center">
                     <p className="mb-3 text-[1.375rem] text-[#F7A582]">Available Services on April 30, 2022</p>
                     <h1 className="text-[2.5rem] font-bold text-[#3B3A3A]">Please select a service.</h1>
                 </div>
-                <div className="my-[3.125rem] grid grid-cols-1 flex-wrap items-center justify-center gap-5 md:grid-cols-2 xl:grid-cols-3">
+                <div className="my-[3.125rem] grid grid-cols-1 justify-center gap-5 md:grid-cols-2 xl:grid-cols-3">
                     {services?.map((service) => <ServiceCard key={service.title} {...service} />)}
                 </div>
             </section>
