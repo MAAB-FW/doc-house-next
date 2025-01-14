@@ -30,3 +30,7 @@ export type TServiceCard = {
     color: string;
     icon: React.ReactNode;
 };
+
+export type TXSlots = TServiceCard & {
+    time: string;
+};
