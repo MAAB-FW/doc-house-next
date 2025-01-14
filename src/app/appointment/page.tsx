@@ -2,7 +2,8 @@
 import Chair from "@/../public/appointment/chair1.png";
 import DynamicBanner from "@/components/DynamicBanner";
 import ServiceCard from "@/components/ServiceCard";
-import { TServiceCard } from "@/types/types";
+import { Slots } from "@/components/Slots";
+import type { TServiceCard } from "@/types/types";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -490,6 +491,10 @@ const Page = () => {
                 <div className="my-[3.125rem] grid grid-cols-1 justify-center gap-5 md:grid-cols-2 xl:grid-cols-3">
                     {services?.map((service) => <ServiceCard key={service.title} {...service} />)}
                 </div>
+            </section>
+            <section className="container mx-auto my-[8.125rem]">
+                <h1 className="mb-[3.125rem] text-center text-[2.5rem] font-bold">Available slots for Teeth Orthodontics.</h1>
+                <Slots />
             </section>
         </div>
     );
