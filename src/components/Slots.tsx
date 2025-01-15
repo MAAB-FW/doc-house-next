@@ -537,7 +537,7 @@ export function Slots() {
         },
     ];
     return (
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-0">
             {slots?.map(({ color, title, time, icon }: TXSlots) => (
                 <div
                     key={title}
@@ -546,7 +546,7 @@ export function Slots() {
                     <div style={{ backgroundColor: color }} className="mb-[1.875rem] rounded-full p-[2.3125rem]">
                         {icon}
                     </div>
-                    <p className="mb-[0.625rem] text-[1.5625rem] font-bold text-[#3B3A3A]">{title}</p>
+                    <p className="mb-[0.625rem] text-nowrap text-[1.5625rem] font-bold text-[#3B3A3A]">{title}</p>
                     <p className="mb-10 text-sm font-semibold uppercase">{time}</p>
                     <button className="rounded-lg bg-[#F7A582] p-[0.9375rem] text-sm font-bold uppercase text-white">
                         Book Appointment

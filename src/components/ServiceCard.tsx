@@ -6,7 +6,7 @@ export default function ServiceCard({ title, color, icon }: TServiceCard) {
             <div style={{ backgroundColor: color, padding: "1.5625rem" }} className="rounded-[0.625rem]">
                 {icon}
             </div>
-            <p className="text-[1.5625rem] font-bold text-[#3B3A3A]">{title}</p>
+            <p className="text-xl font-bold text-[#3B3A3A] lg:text-[1.5625rem]">{title}</p>
         </div>
     );
 }

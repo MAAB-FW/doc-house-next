@@ -485,15 +485,17 @@ const Page = () => {
             </section>
             <section className="container mx-auto max-w-[1140px]">
                 <div className="text-center">
-                    <p className="mb-3 text-[1.375rem] text-[#F7A582]">Available Services on April 30, 2022</p>
-                    <h1 className="text-[2.5rem] font-bold text-[#3B3A3A]">Please select a service.</h1>
+                    <p className="mb-3 text-[#F7A582] lg:text-[1.375rem]">Available Services on April 30, 2022</p>
+                    <h1 className="text-2xl font-bold text-[#3B3A3A] sm:text-4xl lg:text-[2.5rem]">Please select a service.</h1>
                 </div>
-                <div className="my-[3.125rem] grid grid-cols-1 justify-center gap-5 md:grid-cols-2 xl:grid-cols-3">
+                <div className="my-[3.125rem] grid grid-cols-1 justify-center gap-5 px-4 md:grid-cols-2 lg:px-0 xl:grid-cols-3">
                     {services?.map((service) => <ServiceCard key={service.title} {...service} />)}
                 </div>
             </section>
             <section className="container mx-auto my-[8.125rem]">
-                <h1 className="mb-[3.125rem] text-center text-[2.5rem] font-bold">Available slots for Teeth Orthodontics.</h1>
+                <h1 className="mb-[3.125rem] text-center text-2xl font-bold lg:text-[2.5rem]">
+                    Available slots for Teeth Orthodontics.
+                </h1>
                 <Slots />
             </section>
         </div>
