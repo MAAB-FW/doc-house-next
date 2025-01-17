@@ -1,16 +1,14 @@
 "use client";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import React from "react";
-import { navLinks } from "./Navbar";
 
 const Footer = () => {
     const pathname = usePathname();
     if (pathname === "/signin" || pathname === "/signup") return;
-    const a = navLinks?.find((link) => link.path === pathname);
-    if (!a) {
-        return;
-    }
+    // const a = navLinks?.find((link) => link.path === pathname);
+    // if (!a) {
+    //     return;
+    // }
     return (
         <div className="bg-[#f3f3f3] pt-8 lg:pt-[130px]">
             <div className="mx-auto lg:max-w-[1140px]">
