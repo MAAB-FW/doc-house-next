@@ -6,8 +6,8 @@ export default function DoctorProfile() {
     return (
         <>
             <DynamicBanner pageName="Doctor Profile" key="Doctor Profile" />
-            <section className="bg-[#f5f5f5] pt-[8.125rem]">
-                <div className="container mx-auto flex gap-[1.875rem] bg-white p-[2.1875rem]">
+            <section className="bg-[#f5f5f5] py-16 md:py-[8.125rem]">
+                <div className="container mx-auto flex flex-col gap-[1.875rem] bg-white p-[2.1875rem] lg:flex-row">
                     <Image
                         alt="doctor image"
                         src={""}
@@ -16,8 +16,8 @@ export default function DoctorProfile() {
                         className="h-[378px] w-[350px] rounded-[0.625rem] !bg-[#f3f3f3] bg-cover"
                     />
                     <div>
-                        <h1 className="mb-[0.3125rem] text-[2.5rem] font-bold text-[#0A0808]">Dr. Ruby Perrin</h1>
-                        <p className="text-lg text-[#6C6B6B]">MBBS, MD - General Medicine</p>
+                        <h1 className="mb-[0.3125rem] text-2xl font-bold text-[#0A0808] lg:text-[2.5rem]">Dr. Ruby Perrin</h1>
+                        <p className="text-[#6C6B6B] lg:text-lg">MBBS, MD - General Medicine</p>
 
                         {/* ratings */}
                         <div className="my-[0.625rem] flex items-center">
@@ -64,7 +64,7 @@ export default function DoctorProfile() {
                         </div>
                         <div className="my-5 flex gap-4">
                             {[...Array(5)].map((_, index) => (
-                                <div key={index} className="size-20 rounded-[0.625rem] bg-[#F3F3F3]"></div>
+                                <div key={index} className="size-10 rounded-[0.625rem] bg-[#F3F3F3] sm:size-20"></div>
                             ))}
                         </div>
                         <div className="flex gap-4">
