@@ -1,19 +1,22 @@
+"use client";
 import DynamicBanner from "@/components/DynamicBanner";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function DoctorProfile() {
     const ratings = 4;
+    const [tab, setTab] = useState("Overview");
     return (
         <>
             <DynamicBanner pageName="Doctor Profile" key="Doctor Profile" />
             <section className="bg-[#f5f5f5] py-16 md:py-[8.125rem]">
-                <div className="container mx-auto flex flex-col gap-[1.875rem] bg-white p-[2.1875rem] lg:flex-row">
+                <div className="container mx-auto flex flex-col gap-[1.875rem] rounded-[0.625rem] bg-white p-[2.1875rem] lg:flex-row">
                     <Image
                         alt="doctor image"
                         src={""}
                         width={350}
                         height={378}
-                        className="h-[378px] w-[350px] rounded-[0.625rem] !bg-[#f3f3f3] bg-cover"
+                        className="h-[378px] w-[350px] rounded-[0.625rem] bg-[#f3f3f3] bg-cover"
                     />
                     <div>
                         <h1 className="mb-[0.3125rem] text-2xl font-bold text-[#0A0808] lg:text-[2.5rem]">Dr. Ruby Perrin</h1>
@@ -76,6 +79,36 @@ export default function DoctorProfile() {
                             </button>
                         </div>
                     </div>
+                </div>
+                <div className="container mx-auto mt-[3.125rem] rounded-[0.625rem] bg-white p-[2.1875rem]">
+                    <div className="mb-[1.875rem] flex border-b border-[#E6E6E6] text-xl *:w-full *:py-[1.125rem]">
+                        <button
+                            onClick={() => setTab("Overview")}
+                            className={`${tab === "Overview" ? "bg-[#F7A582] font-bold text-white" : "font-semibold text-[#6C6B6B]"} rounded-ss-[0.625rem]`}
+                        >
+                            Overview
+                        </button>
+                        <button
+                            onClick={() => setTab("Locations")}
+                            className={`${tab === "Locations" ? "bg-[#F7A582] font-bold text-white" : "font-semibold text-[#6C6B6B]"}`}
+                        >
+                            Locations
+                        </button>
+                        <button
+                            onClick={() => setTab("Reviews")}
+                            className={`${tab === "Reviews" ? "bg-[#F7A582] font-bold text-white" : "font-semibold text-[#6C6B6B]"}`}
+                        >
+                            Reviews
+                        </button>
+                        <button
+                            onClick={() => setTab("Business Hours")}
+                            className={`${tab === "Business Hours" ? "bg-[#F7A582] font-bold text-white" : "font-semibold text-[#6C6B6B]"} rounded-se-[0.625rem]`}
+                        >
+                            Business Hours
+                        </button>
+                    </div>
+                    {/* content */}
+                    <div></div>
                 </div>
             </section>
         </>
