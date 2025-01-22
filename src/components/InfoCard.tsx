@@ -9,7 +9,7 @@ type InfoCardProps = {
 export default function InfoCard({ bgColor, title, description, icon }: InfoCardProps) {
     return (
         <div
-            className={"flex h-[161px] w-[335px] justify-center gap-5 rounded-lg p-[50px] lg:h-[202px] lg:w-[364px]"}
+            className={"flex max-w-[335px] justify-center gap-5 rounded-lg p-[30px] lg:w-[364px] lg:p-[50px]"}
             style={{ backgroundColor: bgColor }}
         >
             <div>{icon}</div>
