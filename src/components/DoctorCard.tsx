@@ -9,7 +9,7 @@ export default function DoctorCard({ name, profession, ratings, location, availa
                 alt="doctor"
                 width={200}
                 height={324}
-                className="h-[182px] w-[295px] rounded-[0.625rem] lg:h-[200px] lg:w-[324px]"
+                className="h-[182px] w-[295px] rounded-[0.625rem] object-cover lg:h-[200px] lg:w-[324px]"
             />
 
             <div>
