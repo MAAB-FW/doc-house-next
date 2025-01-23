@@ -8,11 +8,11 @@ const OurServices = () => {
                 alt="services"
                 width={558}
                 height={1053}
-                className="mx-auto max-h-[633px] w-[335px] md:max-h-[1053px] md:w-1/2 md:max-w-[558px]"
+                className="mx- auto max-h-[633px] w-[335px] md:max-h-[1053px] md:w-1/2 md:max-w-[558px]"
             />
-            <div className="mx-auto max-w-[335px] text-center md:w-1/2 lg:text-left">
+            <div className="mx-auto max-w-[335px] text-center md:w-1/2 md:max-w-[558px] lg:text-left">
                 <h2 className="mb-4 text-[30px] font-bold text-[#0A0808] md:mb-5 md:text-[40px]">Our Services</h2>
-                <p className="mb-4 text-sm text-[#3B3A3A] md:mb-[30px] md:text-base lg:w-[438px]">
+                <p className="mb-4 text-sm text-[#3B3A3A] md:mb-[30px] md:text-base lg:max-w-[438px]">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                 </p>
