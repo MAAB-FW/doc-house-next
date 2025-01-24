@@ -4,7 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function DoctorProfile() {
-    const ratings = 4;
+    const { name, degree, ratings, reviewers, location } = {
+        name: "Dr. Ruby Perrin",
+        degree: "MBBS, MD - General Medicine",
+        ratings: 4,
+        reviewers: 35,
+        location: "Dhanmondi, Dhaka, Bangladesh",
+    };
     const [tab, setTab] = useState("Overview");
     return (
         <>
@@ -19,8 +25,8 @@ export default function DoctorProfile() {
                         className="h-[378px] w-[350px] rounded-[0.625rem] bg-[#f3f3f3] bg-cover"
                     />
                     <div>
-                        <h1 className="mb-[0.3125rem] text-2xl font-bold text-[#0A0808] lg:text-[2.5rem]">Dr. Ruby Perrin</h1>
-                        <p className="text-[#6C6B6B] lg:text-lg">MBBS, MD - General Medicine</p>
+                        <h1 className="mb-[0.3125rem] text-2xl font-bold text-[#0A0808] lg:text-[2.5rem]">{name}</h1>
+                        <p className="text-[#6C6B6B] lg:text-lg">{degree}</p>
 
                         {/* ratings */}
                         <div className="my-[0.625rem] flex items-center">
@@ -42,7 +48,7 @@ export default function DoctorProfile() {
                                     />
                                 </svg>
                             ))}
-                            <span className="ml-4 text-lg text-[#6C6B6B]">(35)</span>
+                            <span className="ml-4 text-lg text-[#6C6B6B]">({reviewers})</span>
                         </div>
                         <div className="flex items-center gap-5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -62,7 +68,7 @@ export default function DoctorProfile() {
                                 />
                             </svg>
                             <p className="text-[#6C6B6B]">
-                                Dhanmondi, Dhaka, Bangladesh - <span className="font-bold text-[#F7A582]">Get Directions</span>
+                                {location} - <span className="font-bold text-[#F7A582]">Get Directions</span>
                             </p>
                         </div>
                         <div className="my-5 flex gap-4">
