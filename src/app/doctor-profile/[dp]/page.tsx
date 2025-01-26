@@ -71,12 +71,12 @@ export default function DoctorProfile() {
                                 {location} - <span className="font-bold text-[#F7A582]">Get Directions</span>
                             </p>
                         </div>
-                        <div className="my-5 flex gap-4">
-                            {[...Array(5)].map((_, index) => (
-                                <div key={index} className="size-10 rounded-[0.625rem] bg-[#F3F3F3] sm:size-20"></div>
+                        <div className="my-5 grid grid-cols-3 gap-4 sm:grid-cols-6">
+                            {[...Array(6)].map((_, index) => (
+                                <div key={index} className="size-20 rounded-[0.625rem] bg-[#F3F3F3]"></div>
                             ))}
                         </div>
-                        <div className="flex gap-4">
+                        <div className="flex flex-col items-start gap-4 lg:flex-row">
                             <button className="rounded-[0.625rem] border border-[6C6B6B] px-5 py-[0.625rem] text-xl font-semibold text-[#6C6B6B]">
                                 Dental Filling
                             </button>
@@ -87,7 +87,7 @@ export default function DoctorProfile() {
                     </div>
                 </div>
                 <div className="container mx-auto mt-[3.125rem] rounded-[0.625rem] bg-white p-[2.1875rem]">
-                    <div className="mb-[1.875rem] flex border-b border-[#E6E6E6] text-xl *:w-full *:py-[1.125rem]">
+                    <div className="mb-[1.875rem] flex overflow-x-scroll border-b border-[#E6E6E6] text-xl *:w-full *:px-7 *:py-[1.125rem]">
                         <button
                             onClick={() => setTab("Overview")}
                             className={`${tab === "Overview" ? "bg-[#F7A582] font-bold text-white" : "font-semibold text-[#6C6B6B]"} rounded-ss-[0.625rem]`}
