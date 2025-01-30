@@ -155,6 +155,15 @@ export default function DoctorProfile() {
                                         <p className="ml-5">2005 - 2007 (2 years)</p>
                                     </div>
                                 </div>
+                                <div className="mb-5">
+                                    <h3 className="mb-5 text-xl font-bold">Services</h3>
+                                    <li className="ml-3">Tooth cleaning</li>
+                                    <li className="ml-3">Root Canal Therapy</li>
+                                    <li className="ml-3">Implants</li>
+                                    <li className="ml-3">Composite Bonding</li>
+                                    <li className="ml-3">Fissure Sealants</li>
+                                    <li className="ml-3">Surgical Extractions</li>
+                                </div>
                             </div>
                             <div className="w-full space-y-5 *:max-w-[538px]">
                                 <h3 className="text-xl font-bold">Awards</h3>
@@ -181,6 +190,15 @@ export default function DoctorProfile() {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et
                                         malesuada fames ac ante ipsum primis in faucibus.
                                     </p>
+                                </div>
+                                <div className="mb-5">
+                                    <h3 className="mb-5 text-xl font-bold">Specializations</h3>
+                                    <li className="ml-3">Children Care</li>
+                                    <li className="ml-3">Dental Care</li>
+                                    <li className="ml-3">Oral and Maxillofacial Surgery</li>
+                                    <li className="ml-3">Orthodontist</li>
+                                    <li className="ml-3">Periodontist</li>
+                                    <li className="ml-3">Prosthodontics</li>
                                 </div>
                             </div>
                         </div>
