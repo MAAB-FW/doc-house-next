@@ -15,7 +15,7 @@ export default function DoctorProfile() {
     return (
         <>
             <DynamicBanner pageName="Doctor Profile" key="Doctor Profile" />
-            <section className="bg-[#f5f5f5] py-16 md:py-[8.125rem]">
+            <section className="bg-[#f5f5f5] p-8 md:py-[8.125rem]">
                 <div className="container mx-auto flex flex-col gap-[1.875rem] rounded-[0.625rem] bg-white p-[2.1875rem] lg:flex-row">
                     <Image
                         alt="doctor image"
@@ -86,7 +86,7 @@ export default function DoctorProfile() {
                         </div>
                     </div>
                 </div>
-                <div className="container mx-auto mt-[3.125rem] rounded-[0.625rem] bg-white p-[2.1875rem]">
+                <div className="container mx-auto mt-[3.125rem] rounded-[0.625rem] bg-white p-5 lg:p-[2.1875rem]">
                     <div className="mb-[1.875rem] flex overflow-x-scroll border-b border-[#E6E6E6] text-xl *:w-full *:px-7 *:py-[1.125rem]">
                         <button
                             onClick={() => setTab("Overview")}
@@ -114,7 +114,7 @@ export default function DoctorProfile() {
                         </button>
                     </div>
                     {/* content */}
-                    <div className="text-[#3B3A3A]">
+                    <div className="space-y-6 text-[#3B3A3A]">
                         <div>
                             <h3 className="text-xl font-bold">About Me</h3>
                             <p className="my-[0.625rem]">
@@ -125,8 +125,8 @@ export default function DoctorProfile() {
                                 in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                         </div>
-                        <div className="flex flex-col lg:flex-row">
-                            <div className="w-full">
+                        <div className="flex flex-col gap-6 lg:flex-row">
+                            <div className="w-full space-y-6">
                                 <div className="mb-5">
                                     <h3 className="mb-5 text-xl font-bold">Education</h3>
                                     <div className="ml-3">
@@ -165,7 +165,7 @@ export default function DoctorProfile() {
                                     <li className="ml-3">Surgical Extractions</li>
                                 </div>
                             </div>
-                            <div className="w-full space-y-5 *:max-w-[538px]">
+                            <div className="w-full space-y-6 *:max-w-[538px]">
                                 <h3 className="text-xl font-bold">Awards</h3>
                                 <div className="ml-5">
                                     <p>July 2019</p>
