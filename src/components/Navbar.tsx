@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
-import { TfiMenu } from "react-icons/tfi";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
+import { TfiMenu } from "react-icons/tfi";
 export const navLinks = [
     {
         name: "Home",
@@ -34,7 +34,7 @@ export const navLinks = [
 const Navbar = () => {
     const pathname = usePathname();
     const [menu, setMenu] = useState(false);
-    if (pathname === "/signin" || pathname === "/signup") return;
+    if (pathname === "/signin" || pathname === "/signup" || pathname.startsWith("/dashboard")) return;
     // const a = navLinks?.find((link) => link.path === pathname);
     // if (!a) {
     //     return;

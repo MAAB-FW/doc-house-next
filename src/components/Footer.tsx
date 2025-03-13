@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
     const pathname = usePathname();
-    if (pathname === "/signin" || pathname === "/signup") return;
+    if (pathname === "/signin" || pathname === "/signup" || pathname.startsWith("/dashboard")) return;
     // const a = navLinks?.find((link) => link.path === pathname);
     // if (!a) {
     //     return;
