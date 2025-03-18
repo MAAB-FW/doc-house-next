@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         <li>My Appointment</li>
                     </ul>
                 </div>
-                <div className="mx-14 mt-6 min-h-[calc(100vh-114px)] flex-1">{children}</div>
+                <div className="mx-14 my-6 min-h-[calc(100vh-138px)] flex-1">{children}</div>
             </div>
         </div>
     );
